@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.API", "src\CarRental.API\CarRental.API.csproj", "{4D74254B-6687-4B2A-A649-068615173CC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{450E9076-77A8-4472-9340-CEFC8354DEE5}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Domain", "src\CarRental.Domain\CarRental.Domain.csproj", "{6AFAA4AA-1593-4060-9E8B-BA7135F1724F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Application.UnitTests", "tests\CarRental.Application.UnitTests\CarRental.Application.UnitTests.csproj", "{F77333DA-2B48-4666-8D07-9AB27CF21671}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D74254B-6687-4B2A-A649-068615173CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D74254B-6687-4B2A-A649-068615173CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D74254B-6687-4B2A-A649-068615173CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D74254B-6687-4B2A-A649-068615173CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AFAA4AA-1593-4060-9E8B-BA7135F1724F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFAA4AA-1593-4060-9E8B-BA7135F1724F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFAA4AA-1593-4060-9E8B-BA7135F1724F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFAA4AA-1593-4060-9E8B-BA7135F1724F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77333DA-2B48-4666-8D07-9AB27CF21671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77333DA-2B48-4666-8D07-9AB27CF21671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77333DA-2B48-4666-8D07-9AB27CF21671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77333DA-2B48-4666-8D07-9AB27CF21671}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
