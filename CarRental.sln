@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Domain", "src\Car
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Application.UnitTests", "tests\CarRental.Application.UnitTests\CarRental.Application.UnitTests.csproj", "{F77333DA-2B48-4666-8D07-9AB27CF21671}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Application", "src\CarRental.Application\CarRental.Application.csproj", "{3117F827-0F13-4236-A2FD-47046C5FC05C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Infrastructure", "src\CarRental.Infrastructure\CarRental.Infrastructure.csproj", "{60F73E72-D7B3-43AA-9069-0C6FB65EFCC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +35,13 @@ Global
 		{F77333DA-2B48-4666-8D07-9AB27CF21671}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F77333DA-2B48-4666-8D07-9AB27CF21671}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F77333DA-2B48-4666-8D07-9AB27CF21671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3117F827-0F13-4236-A2FD-47046C5FC05C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3117F827-0F13-4236-A2FD-47046C5FC05C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3117F827-0F13-4236-A2FD-47046C5FC05C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3117F827-0F13-4236-A2FD-47046C5FC05C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F73E72-D7B3-43AA-9069-0C6FB65EFCC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F73E72-D7B3-43AA-9069-0C6FB65EFCC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F73E72-D7B3-43AA-9069-0C6FB65EFCC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F73E72-D7B3-43AA-9069-0C6FB65EFCC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
