@@ -1,6 +1,13 @@
-namespace CarRental.Infrastructure.Configurations;
+using CarRental.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-public class ReservationConfiguration
+namespace CarRental.Infrastructure.Data.Configurations;
+
+public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
 {
-    
+    public void Configure(EntityTypeBuilder<Reservation> entityBuilder)
+    {
+        entityBuilder.Property(x => x);
+    }
 }

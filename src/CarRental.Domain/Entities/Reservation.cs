@@ -1,6 +1,7 @@
+using CarRental.Domain.Primitives;
+
 namespace CarRental.Domain.Entities;
 
-public class Reservation
+public class Reservation : Entity
 {
-    
 }
