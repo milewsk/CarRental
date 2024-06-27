@@ -4,12 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CarRental.Infrastructure.Data.Configurations;
 
-public class AssetConfiguration : IEntityTypeConfiguration<Asset>
+public class ModelPricingConfiguration: IEntityTypeConfiguration<ModelPricing>
 {
-    public void Configure(EntityTypeBuilder<Asset> entityBuilder)
+    public void Configure(EntityTypeBuilder<ModelPricing> entityBuilder)
     {
         entityBuilder.HasKey(x => x.Id);
         entityBuilder.Property(x => x.CreateDateUtc).IsRequired();
         entityBuilder.Property(x => x.ModificationDateUtc).IsRequired();
+        entityBuilder.Property(x => x.PricePerDay).IsRequired();
+        entityBuilder.Property(x => x.StandardPrice).IsRequired();
+        entityBuilder.Property(x => x.StandardPrice).IsRequired();
     }
 }

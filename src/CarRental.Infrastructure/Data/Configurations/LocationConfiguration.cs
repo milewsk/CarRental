@@ -4,12 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CarRental.Infrastructure.Data.Configurations;
 
-public class AssetConfiguration : IEntityTypeConfiguration<Asset>
+public class LocationConfiguration : IEntityTypeConfiguration<Location>
 {
-    public void Configure(EntityTypeBuilder<Asset> entityBuilder)
+    public void Configure(EntityTypeBuilder<Location> entityBuilder)
     {
         entityBuilder.HasKey(x => x.Id);
         entityBuilder.Property(x => x.CreateDateUtc).IsRequired();
         entityBuilder.Property(x => x.ModificationDateUtc).IsRequired();
+        entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(80);
+        entityBuilder.Property(x => x.Address).IsRequired().HasMaxLength(120);
+        entityBuilder.Property(x => x.Country).IsRequired().HasMaxLength(50);
     }
 }

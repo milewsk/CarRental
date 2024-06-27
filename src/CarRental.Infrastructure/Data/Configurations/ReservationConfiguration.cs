@@ -8,6 +8,6 @@ public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
 {
     public void Configure(EntityTypeBuilder<Reservation> entityBuilder)
     {
-        entityBuilder.Property(x => x);
+        entityBuilder.HasKey(x => x.Id);
     }
 }

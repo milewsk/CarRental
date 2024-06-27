@@ -1,11 +1,12 @@
 using CarRental.Application.Common.Interfaces;
+using CarRental.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarRental.Application.Interfaces;
 
 public interface IApplicationDbContext
 {
-    DbSet<IModel> Models { get; }
+    DbSet<Model> Models { get; }
     
   //  Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
