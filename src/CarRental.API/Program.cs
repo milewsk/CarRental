@@ -1,9 +1,7 @@
-using CarRental.API.MinimalApi;
 using CarRental.Application;
-using CarRental.Application.Reservations.Queries;
 using CarRental.Infrastructure;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
+using CarRental.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +31,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Minimal api endpoints
-app.AddReservationEndpoints();
+//app.AddReservationEndpoints();
 
 await app.RunAsync();

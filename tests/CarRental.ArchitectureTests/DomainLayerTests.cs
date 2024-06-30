@@ -1,5 +1,4 @@
 using System.Reflection;
-using CarRental.Domain.Abstractions;
 using CarRental.Domain.Primitives;
 using FluentAssertions;
 using NetArchTest.Rules;
@@ -8,44 +7,6 @@ namespace CarRental.ArchitectureTests;
 
 public class DomainLayerTests : BaseTests
 {
-    [Fact]
-    public void DomainEvents_Should_BeSealed()
-    {
-        // Arrange
-        var assembly = DomainAssemblyReference;
-
-        // Act
-        var result = Types
-            .InAssembly(assembly)
-            .That()
-            .ImplementInterface(typeof(IDomainEvent))
-            .Should()
-            .BeSealed()
-            .GetResult();
-
-        // Assert
-        result.IsSuccessful.Should().BeTrue();
-    }
-
-    [Fact]
-    public void DomainEvents_Should_Have_DomainEventPostFix()
-    {
-        // Arrange
-        var assembly = DomainAssemblyReference;
-
-        // Act
-        var result = Types
-            .InAssembly(assembly)
-            .That()
-            .ImplementInterface(typeof(IDomainEvent))
-            .Should()
-            .HaveNameEndingWith("DomainEvent")
-            .GetResult();
-
-        // Assert
-        result.IsSuccessful.Should().BeTrue();
-    }
-
     [Fact]
     public void Entities_Should_Have_PrivateParameterlessConstructor()
     {

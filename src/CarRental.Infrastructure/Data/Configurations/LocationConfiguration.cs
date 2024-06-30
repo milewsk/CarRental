@@ -4,18 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CarRental.Infrastructure.Data.Configurations;
 
-public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
+public class LocationConfiguration : IEntityTypeConfiguration<Location>
 {
-    public void Configure(EntityTypeBuilder<Reservation> entityBuilder)
+    public void Configure(EntityTypeBuilder<Location> entityBuilder)
     {
         entityBuilder.HasKey(x => x.Id);
         entityBuilder.Property(x => x.CreateDateUtc).IsRequired();
         entityBuilder.Property(x => x.ModificationDateUtc).IsRequired();
-        
-        entityBuilder
-            .HasOne(r => r.Asset)
-            .WithOne(a => a.Reservation)
-            .HasForeignKey<Reservation>(r => r.AssetId)
-            .IsRequired();
+        entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(80);
+        entityBuilder.Property(x => x.Address).IsRequired().HasMaxLength(120);
+        entityBuilder.Property(x => x.Country).IsRequired().HasMaxLength(50);
     }
 }
