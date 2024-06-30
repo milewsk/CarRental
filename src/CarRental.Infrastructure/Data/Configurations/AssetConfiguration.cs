@@ -11,5 +11,17 @@ public class AssetConfiguration : IEntityTypeConfiguration<Asset>
         entityBuilder.HasKey(x => x.Id);
         entityBuilder.Property(x => x.CreateDateUtc).IsRequired();
         entityBuilder.Property(x => x.ModificationDateUtc).IsRequired();
+
+        entityBuilder
+            .HasOne<Location>(a => a.Location)
+            .WithMany(l => l.Assets)
+            .HasForeignKey(a => a.LocationId)
+            .IsRequired();
+        
+        entityBuilder
+            .HasOne<Model>(a => a.Model)
+            .WithMany(m => m.Assets)
+            .HasForeignKey(a => a.ModelId)
+            .IsRequired();
     }
 }

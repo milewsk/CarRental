@@ -14,5 +14,11 @@ public class ModelPricingConfiguration: IEntityTypeConfiguration<ModelPricing>
         entityBuilder.Property(x => x.PricePerDay).IsRequired();
         entityBuilder.Property(x => x.StandardPrice).IsRequired();
         entityBuilder.Property(x => x.StandardPrice).IsRequired();
+        
+        entityBuilder
+            .HasOne(mp => mp.Model)
+            .WithOne(m => m.ModelPricing)
+            .HasForeignKey<ModelPricing>(mp => mp.ModelId)
+            .IsRequired();
     }
 }
