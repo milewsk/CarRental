@@ -16,7 +16,18 @@ public class ModelPricing : Entity
 
     // Relationships
     public Guid ModelId { get; set; }
-    public Model Model { get; set; }
+    public Model Model { get; set; } = null!;
+
+    // Constructors
+    public ModelPricing(decimal standardPrice, decimal shortTermPrice, decimal longTermPrice, decimal pricePerDay,
+        Guid modelId)
+    {
+        StandardPrice = standardPrice;
+        ShortTermPrice = shortTermPrice;
+        LongTermPrice = longTermPrice;
+        PricePerDay = pricePerDay;
+        ModelId = modelId;
+    }
 
     public ModelPricing(decimal standardPrice, decimal shortTermPrice, decimal longTermPrice, decimal pricePerDay,
         Model model)
