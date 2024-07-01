@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarRental.Infrastructure.Repositories;
 
-internal sealed class ReservationRepository : IReservationRepository
+internal sealed class ReservationRepository : GenericRepository<Reservation>, IReservationRepository
 {
     private readonly ApplicationDbContext _context;
 
-    public ReservationRepository(ApplicationDbContext context)
+    public ReservationRepository(ApplicationDbContext context) : base(context)
     {
         _context = context;
     }
