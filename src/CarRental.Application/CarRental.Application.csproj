@@ -8,7 +8,10 @@
 
     <ItemGroup>
       <Folder Include="Common\Dtos\" />
-      <Folder Include="Reservations\Commands\" />
+      <Folder Include="Common\Interfaces\" />
+      <Folder Include="Common\Models\" />
+      <Folder Include="Interfaces\" />
+      <Folder Include="Reservations\Queries\GetReservationDetailsQuery\" />
     </ItemGroup>
 
     <ItemGroup>
