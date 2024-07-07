@@ -1,4 +1,3 @@
-using CarRental.Application.Interfaces;
 using CarRental.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
