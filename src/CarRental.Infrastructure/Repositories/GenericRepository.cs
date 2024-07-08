@@ -28,12 +28,12 @@ public abstract class GenericRepository<TEntity> : IGenericRepository<TEntity> w
                throw new InvalidOperationException();
     }
 
-    public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
+    public virtual async Task<List<TEntity>> GetAllAsync()
     {
         return await _context.Set<TEntity>().ToListAsync();
     }
 
-    public virtual async Task<IEnumerable<TEntity>> GetAllAsync(params Expression<Func<TEntity, object>>[]? includes)
+    public virtual async Task<List<TEntity>> GetAllAsync(params Expression<Func<TEntity, object>>[]? includes)
     {
         IQueryable<TEntity> list = _context.Set<TEntity>();
 
@@ -47,7 +47,7 @@ public abstract class GenericRepository<TEntity> : IGenericRepository<TEntity> w
         return await list.ToListAsync();
     }
 
-    public virtual async Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate)
+    public virtual async Task<List<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate)
     {
         return await _context.Set<TEntity>().Where(predicate).ToListAsync();
     }
@@ -57,12 +57,12 @@ public abstract class GenericRepository<TEntity> : IGenericRepository<TEntity> w
         _context.Set<TEntity>().Add(entity);
     }
 
-    public virtual async void AddAsync(TEntity entity)
+    public virtual async Task AddAsync(TEntity entity)
     {
         await _context.Set<TEntity>().AddAsync(entity);
     }
 
-    public virtual async void AddRangeAsync(IEnumerable<TEntity> entities)
+    public virtual async Task AddRangeAsync(IEnumerable<TEntity> entities)
     {
         await _context.Set<TEntity>().AddRangeAsync(entities);
     }

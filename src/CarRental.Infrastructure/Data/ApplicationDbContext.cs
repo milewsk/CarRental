@@ -1,5 +1,4 @@
 using System.Reflection;
-using CarRental.Application.Interfaces;
 using CarRental.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 

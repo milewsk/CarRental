@@ -8,10 +8,6 @@ public class ModelPricing : Entity
     // Properties
     public decimal StandardPrice { get; set; }
 
-    public decimal ShortTermPrice { get; set; }
-
-    public decimal LongTermPrice { get; set; }
-
     public decimal PricePerDay { get; set; }
 
     // Relationships
@@ -19,12 +15,10 @@ public class ModelPricing : Entity
     public Model Model { get; set; } = null!;
 
     // Constructors
-    public ModelPricing(decimal standardPrice, decimal shortTermPrice, decimal longTermPrice, decimal pricePerDay,
+    public ModelPricing(decimal standardPrice, decimal pricePerDay,
         Guid modelId)
     {
         StandardPrice = standardPrice;
-        ShortTermPrice = shortTermPrice;
-        LongTermPrice = longTermPrice;
         PricePerDay = pricePerDay;
         ModelId = modelId;
     }
@@ -33,8 +27,6 @@ public class ModelPricing : Entity
         Model model)
     {
         StandardPrice = standardPrice;
-        ShortTermPrice = shortTermPrice;
-        LongTermPrice = longTermPrice;
         PricePerDay = pricePerDay;
         ModelId = model.Id;
         Model = model;
