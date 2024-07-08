@@ -1,4 +1,5 @@
+using CarRental.Application.Common.Dtos.Reservation;
 using CarRental.Domain.Entities;
 
 namespace CarRental.Application.Reservations.Queries.GetReservationsQuery;
-public sealed record ReservationsResponse(List<Reservation> Reservations);
+public sealed record ReservationsResponse(List<ReservationDto> Reservations);

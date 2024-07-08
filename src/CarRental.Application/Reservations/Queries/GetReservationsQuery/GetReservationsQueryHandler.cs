@@ -1,4 +1,5 @@
 using CarRental.Application.Abstractions;
+using CarRental.Application.Common.Extensions;
 using CarRental.Domain.Repositories;
 using CarRental.Domain.Shared;
 
@@ -17,10 +18,11 @@ internal sealed class GetReservationsQueryHandler : IQueryHandler<GetReservation
         CancellationToken cancellationToken)
     {
         var reservations = await _reservationRepository.GetAllAsync();
+        var mapper = new ReservationMapper();
 
         if (reservations.Count == 0)
         {
-            return new ReservationsResponse(reservations);
+            return new ReservationsResponse(mapper.ReservationListToReservationListDto(reservations));
         }
 
         if (request.Status is not null)
@@ -33,7 +35,7 @@ internal sealed class GetReservationsQueryHandler : IQueryHandler<GetReservation
             reservations = reservations.Where(x => x.Type == request.Type).ToList();
         }
 
-        var response = new ReservationsResponse(reservations);
+        var response = new ReservationsResponse(mapper.ReservationListToReservationListDto(reservations));
 
         return response;
     }
